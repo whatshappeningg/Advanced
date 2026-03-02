@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Points : MonoBehaviour
 {
 	#region Properties
 	public int CurrentPoints { get; set; }
+	public int CurrentLevel { get; set; }
+	public event Action OnAddLevel;
 
 	#endregion
 
@@ -19,6 +22,11 @@ public class Points : MonoBehaviour
 	public void AddPoints(int pointsToAdd)
 	{
 		CurrentPoints += pointsToAdd;
+		if (CurrentPoints % 500 == 0)
+		{
+			CurrentLevel++;
+			OnAddLevel?.Invoke();
+		}
 	}
 	#endregion
 }

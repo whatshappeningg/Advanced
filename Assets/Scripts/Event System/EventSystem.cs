@@ -22,7 +22,8 @@ public class EventSystem : MonoBehaviour
 		_inputSystem.OnKeyDamage += OnGetDamage;
 		_inputSystem.OnKeyHeal += OnGetHeal;
 		_inputSystem.OnKeyPoints += OnAddPoints;
-		_inputSystem.OnKeyAddLevel += OnAddLevel;
+
+		_points.OnAddLevel += OnAddLevel;
 
 		_payerHealth.OnDie += OnDie;
 	}
@@ -54,7 +55,7 @@ public class EventSystem : MonoBehaviour
 	}
 	private void OnAddLevel()
 	{
-		throw new NotImplementedException();
+		_ui.UpdateLevel(_points.CurrentLevel);
 	}
 	#endregion
 }

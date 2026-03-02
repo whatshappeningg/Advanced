@@ -7,7 +7,6 @@ public class InputSystem : MonoBehaviour
     public event Action OnKeyDamage;
     public event Action OnKeyHeal;
     public event Action OnKeyPoints;
-    public event Action OnKeyAddLevel;
 
     #endregion
 
@@ -22,9 +21,6 @@ public class InputSystem : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
             OnKeyPoints?.Invoke();
-
-        if (Input.GetKeyUp(KeyCode.Return))
-            OnKeyAddLevel?.Invoke();
     }
 
     #endregion

@@ -16,20 +16,15 @@ public class EventSystem : MonoBehaviour
 	#endregion
 
 	#region Unity Callbacks
-	// Start is called before the first frame update
 	void Start()
 	{
 		//Event Listener
-		//_payerHealth.OnGetDamage += OnGetDamage;
-		//_payerHealth.OnGetHeal += OnGetHeal;
 		_inputSystem.OnKeyDamage += OnGetDamage;
 		_inputSystem.OnKeyHeal += OnGetHeal;
 		_inputSystem.OnKeyPoints += OnAddPoints;
 		_inputSystem.OnKeyAddLevel += OnAddLevel;
 
 		_payerHealth.OnDie += OnDie;
-
-		//_points.OnGetPoints += OnAddPoints;
 	}
 
 

@@ -24,15 +24,11 @@ public class Health : MonoBehaviour
 				_currentHealth = _maxHealth;
 		}
 	}
-
-	// public event Action OnGetDamage;
-	// public event Action OnGetHeal;
 	public event Action OnDie;
 
 	#endregion
 
 	#region Fields
-
 	[SerializeField] private float _maxHealth = 100;
 	[SerializeField] private float _currentHealth;
 	[SerializeField] private bool _die = false;
@@ -43,18 +39,8 @@ public class Health : MonoBehaviour
 	void Start()
 	{
 		CurrentHealth = _maxHealth;
-
 	}
 
-	//Update is called once per frame
-
-	//void Update()
-	//{
-	//	if (Input.GetKeyUp(KeyCode.Return))
-	//		GetDamage(20);
-	//	if (Input.GetKeyUp(KeyCode.Space))
-	//		GetHeal(20);
-	//}
 	#endregion
 
 	#region Public Methods
@@ -63,8 +49,6 @@ public class Health : MonoBehaviour
 		if (!_die)
 		{
 			CurrentHealth -= damage;
-			//Damage Event Emiter
-			//OnGetDamage?.Invoke();
 		}
 	}
 	public void GetHeal(float life)
@@ -72,8 +56,6 @@ public class Health : MonoBehaviour
 		if (!_die)
 		{
 			CurrentHealth += life;
-			//Heal Event Emiter
-			//OnGetHeal?.Invoke();
 		}
 	}
 	#endregion
@@ -85,7 +67,6 @@ public class Health : MonoBehaviour
 		if (!_die)
 		{
 			_die = true;
-			//Die Event Emiter
 			OnDie?.Invoke();
 		}
 	}

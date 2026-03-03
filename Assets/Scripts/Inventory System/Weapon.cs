@@ -8,6 +8,7 @@ namespace Inventory
 	{
 		#region Properties
 		[field: SerializeField] public float Damage { get; set; }
+
 		#endregion
 
 		#region Public Methods
@@ -15,11 +16,11 @@ namespace Inventory
 		{
 			Debug.Log("Do Atack...");
 		}
-
 		public void Use()
 		{
 			Attack();
 		}
+
 		#endregion
 	}
 }

@@ -27,6 +27,7 @@ namespace Inventory
 		private TextMeshProUGUI _buttonText;
 		private Button _button;
 		private Item _currentItem;
+
 		#endregion
 
 		#region Unity Callbacks
@@ -39,6 +40,5 @@ namespace Inventory
 		}
 
 		#endregion
-
 	}
 }

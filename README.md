@@ -24,7 +24,7 @@ En esta escena se encuentra un player con una barra de vida y un contador de pun
 - Al pulsar la tecla ``Space`` se ganarán 100 puntos. Cada 500 puntos se sumará 1 al nivel.
 
 ### UML
-...
+![EventSystem_UML](img/EventSystem.png)  
 
 ## InventorySystem
 Esta escena representa un sistema de inventario. Todos los items disponibles se ubicarán en la parte superior (ItemPool) en forma de botones.
@@ -50,7 +50,6 @@ Los items dentro del inventario se alamacenarán en el panel de abajo a la izqui
 Pero si se usa una comida se indicarán los puntos de vida recuperados y el item desaparecerá de Inventory.
 
 ### UML
-...
-
+![InventorySystem_UML](img/InventorySystem.png)  
 
 
